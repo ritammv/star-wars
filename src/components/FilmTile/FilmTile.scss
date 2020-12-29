@@ -1,0 +1,10 @@
+.film_tile {
+  width: 650px;
+  height: auto;
+
+  .movie_img {
+    width: auto;
+    height: 550px;
+    object-fit: cover;
+  }
+}
