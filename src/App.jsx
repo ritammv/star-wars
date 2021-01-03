@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
-import './App.scss';
+import { movieContext } from './context/provider';
+import ApiClient from './services/ApiClient';
+
 import Home from './components/Home/Home';
 import FilmInfo from './components/FilmInfo/FilmInfo';
 import CharInfo from './components/CharInfo/CharInfo';
 
-const App = () => (
-  <Switch>
+const App = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [films, setFilms] = useState([]);
+
+  useEffect(() => {
+    ApiClient.getFilms()
+      .then((data) => setFilms(data.results));
+  }, []);
+
+  return (
     <div className="app">
-      <NavBar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/filmInfo/:id" component={FilmInfo} />
-      <Route exact path="/characterInfo/:id" component={CharInfo} />
+      <movieContext.Provider value={films}>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/filmInfo/:id" component={FilmInfo} />
+          <Route exact path="/charInfo/:id" component={CharInfo} />
+        </Switch>
+
+      </movieContext.Provider>
     </div>
-  </Switch>
-);
+
+  );
+};
 
 export default App;
