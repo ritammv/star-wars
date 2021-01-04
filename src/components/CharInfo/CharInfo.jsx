@@ -46,7 +46,3 @@ const CharInfo = () => {
 };
 
 export default CharInfo;
-
-// Name
-// Description
-// Picture

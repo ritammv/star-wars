@@ -6,11 +6,10 @@ const FaveMovie = () => {
 
   return (
     <div className="fave_movie_container">
-
       {faveMovie.length && faveMovie.map((movie) => (
         <div>
           <img
-            className="movie_img"
+            className="fave_movie_img"
             src={`/images/ep${movie.episode_id}.jpg`}
             alt="movie_image"
           />
