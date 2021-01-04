@@ -1,10 +1,12 @@
-.film_info_container {
-  width: 650px;
-  height: auto;
+.film_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .movie_img {
+  .movie_img_info {
+    height: 500px;
     width: auto;
-    height: 550px;
     object-fit: cover;
   }
 }

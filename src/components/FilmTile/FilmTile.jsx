@@ -18,7 +18,7 @@ const FilmTile = ({ film }) => {
         src={`/images/ep${film.episode_id}.jpg`}
         alt="movie_image"
       />
-      <button type="button" onClick={handleClick}>More Info</button>
+      <button type="button" className="btn_default" onClick={handleClick}>More Info</button>
 
     </div>
 

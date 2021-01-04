@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import { movieContext } from '../../context/provider';
+import MovieContext from '../../context/movieContext';
 import './FilmInfo.scss';
 
 const FilmInfo = () => {
-  const films = useContext(movieContext);
+  const films = useContext(MovieContext);
   const history = useHistory();
 
   const { id } = useParams();
@@ -19,16 +19,18 @@ const FilmInfo = () => {
   };
 
   return (
-    <div className="film_info_container">
-      <h1>{currentMovie.title}</h1>
-      <h2>{currentMovie.opening_crawl}</h2>
-      <img
-        className="movie_img"
-        src={`/images/ep${currentMovie.episode_id}.jpg`}
-        alt="movie_image"
-      />
-      {currentMovie.characters && currentMovie.characters.map((character) => <button onClick={handleClick} value={character} type="button">{character}</button>)}
-    </div>
+    <>
+      <div className="film_info">
+        <h1>{currentMovie.title}</h1>
+        <img
+          className="movie_img_info"
+          src={`/images/ep${currentMovie.episode_id}.jpg`}
+          alt="movie_image"
+        />
+        <h2>{currentMovie.opening_crawl}</h2>
+        {currentMovie.characters && currentMovie.characters.map((character) => <button className="character_btn" onClick={handleClick} value={character} type="button">{character}</button>)}
+      </div>
+    </>
   );
 };
 

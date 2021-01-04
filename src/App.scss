@@ -1,4 +1,5 @@
 .app {
+  overflow-y: hidden;
   .movie_tile_list {
     display: flex;
     flex-direction: row;

@@ -1,10 +1,36 @@
 .film_tile {
   width: 650px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
 
   .movie_img {
     width: auto;
     height: 550px;
     object-fit: cover;
+  }
+}
+
+.btn_default {
+  width: 120px;
+  align-self: center;
+  border-radius: 0px;
+  height: 40px;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: 1px solid black;
+  z-index: 3;
+  &:active {
+    transition: 0.3s all;
+    transform: translateY(3px);
+    opacity: 0.8;
   }
 }

@@ -1,0 +1,19 @@
+.character_info_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .movie_img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+.character_info_subcontainer {
+  width: 100%;
+  h3 {
+    text-align: center;
+  }
+}

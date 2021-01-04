@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { movieContext } from '../../context/provider';
+import MovieContext from '../../context/movieContext';
 import FilmTile from '../FilmTile/FilmTile';
 
 const Home = () => {
-  const films = useContext(movieContext);
+  const films = useContext(MovieContext);
 
   return (
 
