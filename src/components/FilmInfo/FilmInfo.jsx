@@ -34,7 +34,7 @@ const FilmInfo = () => {
         <h3>Opening Crawl</h3>
         <p>{currentMovie.opening_crawl}</p>
         <h3>Character List</h3>
-        {currentMovie.characters && currentMovie.characters.map((character) => <button className="character_btn" onClick={handleClick} value={character} type="button">{character}</button>)}
+        {currentMovie.characters && currentMovie.characters.map((character, i) => <button className="character_btn" onClick={handleClick} value={character} type="button">{i + 1}</button>)}
       </div>
     </>
   );

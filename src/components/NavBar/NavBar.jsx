@@ -19,20 +19,23 @@ const NavBar = () => {
       background: '#a90000',
     },
     bmCrossButton: {
-      height: '24px',
-      width: '24px',
+      height: '34px',
+      width: '34px',
     },
     bmCross: {
-      background: '#bdc3c7',
+      background: 'white',
     },
     bmMenuWrap: {
       position: 'fixed',
       height: '100%',
     },
     bmMenu: {
-      background: 'white',
+      background: 'grey',
       padding: '2.5em 1.5em 0',
-      fontSize: '1.15em',
+      fontSize: '1.1em',
+      fontFamily: 'Arial',
+      fontWeight: '100',
+      color: 'white',
     },
     bmMorphShape: {
       fill: '#373a47',
