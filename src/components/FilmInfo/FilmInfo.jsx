@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import MovieContext from '../../context/movieContext';
+import { MovieContext, StoreContext } from '../../context/movieContext';
+
 import './FilmInfo.scss';
 
 const FilmInfo = () => {
   const films = useContext(MovieContext);
   const history = useHistory();
+
+  const { addMovie } = useContext(StoreContext);
 
   const { id } = useParams();
 
@@ -22,6 +25,7 @@ const FilmInfo = () => {
     <>
       <div className="film_info">
         <h1>{currentMovie.title}</h1>
+        <button type="button" onClick={() => addMovie(currentMovie)}>Add to Favourites</button>
         <img
           className="movie_img_info"
           src={`/images/ep${currentMovie.episode_id}.jpg`}

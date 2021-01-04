@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MovieContext from '../../context/movieContext';
+import { MovieContext } from '../../context/movieContext';
 import FilmTile from '../FilmTile/FilmTile';
 
 const Home = () => {

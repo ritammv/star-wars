@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ApiClient from '../../services/ApiClient';
 import './CharInfo.scss';
+import { StoreContext } from '../../context/movieContext';
 
 const CharInfo = () => {
   const [character, setCharacter] = useState({});
   const { id } = useParams();
+
+  const { addCharacter } = useContext(StoreContext);
 
   useEffect(() => {
     ApiClient.getCharacter(id)
@@ -15,6 +18,7 @@ const CharInfo = () => {
   return (
     <div className="character_info_container">
       <h1>{character.name}</h1>
+      <button type="button" onClick={() => addCharacter(character)}>Add Character To Favourites</button>
       <img
         className="movie_img"
         src={`/characters/${id}.jpg`}

@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { StoreContext } from '../../context/movieContext';
 
-const FaveChar = () => (
-  <div className="fave_char_container">
-    <h1>fave chars here </h1>
-  </div>
-);
+const FaveChar = () => {
+  const { faveChar } = useContext(StoreContext);
+
+  return (
+    <div className="fave_char_container">
+      {faveChar.length && faveChar.map((char) => (
+        <div>
+          {/* <img
+            className="movie_img"
+            src={`/characters/.jpg`}
+            alt="movie_image"
+          /> */}
+          <h1>{char.name}</h1>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default FaveChar;
