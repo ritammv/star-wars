@@ -25,13 +25,15 @@ const FilmInfo = () => {
     <>
       <div className="film_info">
         <h1>{currentMovie.title}</h1>
-        <button type="button" onClick={() => addMovie(currentMovie)}>Add to Favourites</button>
+        <button className="btn_default" type="button" onClick={() => addMovie(currentMovie)}>❤️Add to Favorites</button>
         <img
           className="movie_img_info"
           src={`/images/ep${currentMovie.episode_id}.jpg`}
           alt="movie_image"
         />
-        <h2>{currentMovie.opening_crawl}</h2>
+        <h3>Opening Crawl</h3>
+        <p>{currentMovie.opening_crawl}</p>
+        <h3>Character List</h3>
         {currentMovie.characters && currentMovie.characters.map((character) => <button className="character_btn" onClick={handleClick} value={character} type="button">{character}</button>)}
       </div>
     </>

@@ -13,3 +13,5 @@ async function getCharacter(id) {
 }
 
 export default { getFilms, getCharacter };
+
+// TODO ERROR HANDLING HERE

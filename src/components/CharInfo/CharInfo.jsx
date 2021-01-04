@@ -18,7 +18,7 @@ const CharInfo = () => {
   return (
     <div className="character_info_container">
       <h1>{character.name}</h1>
-      <button type="button" onClick={() => addCharacter(character)}>Add Character To Favourites</button>
+      <button className="btn_default" type="button" onClick={() => addCharacter(character)}>❤️ Add To Favourites</button>
       <img
         className="movie_img"
         src={`/characters/${id}.jpg`}

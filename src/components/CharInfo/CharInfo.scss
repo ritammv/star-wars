@@ -3,11 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 5px;
+  h1,
+  h3,
+  p {
+    font-family: Arial;
+    font-weight: 100;
+  }
 
   .movie_img {
-    height: 400px;
+    height: 500px;
     width: auto;
     object-fit: cover;
+    border: 1px solid white;
   }
 }
 

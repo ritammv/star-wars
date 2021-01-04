@@ -1,5 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import './NavBar.scss';
 
 const NavBar = () => {
   const styles = {
@@ -50,6 +51,7 @@ const NavBar = () => {
 
   return (
     <div className="nav_bar_container">
+      <h3>May the Force be with you!</h3>
       <Menu styles={styles} right>
         <ul>
           <li><a id="home" className="menu-item" href="/">Home</a></li>

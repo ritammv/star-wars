@@ -1,11 +1,14 @@
-import React, {
-  useEffect, useState, useReducer,
+import React,
+{
+  useEffect,
+  useState,
+  useReducer,
 } from 'react';
+import './App.scss';
 import { Route, Switch } from 'react-router-dom';
 import { MovieContext, StoreContext, initialState } from './context/movieContext';
 import ApiClient from './services/ApiClient';
 import Reducer from './context/reducer';
-import './App.scss';
 import Home from './components/Home/Home';
 import FilmInfo from './components/FilmInfo/FilmInfo';
 import CharInfo from './components/CharInfo/CharInfo';
@@ -54,9 +57,7 @@ const App = () => {
             <Route exact path="/charInfo/:id" component={CharInfo} />
             <Route exact path="/faveMovie" component={FaveMovie} />
             <Route exact path="/faveChar" component={FaveChar} />
-
           </Switch>
-
         </MovieContext.Provider>
       </StoreContext.Provider>
 
